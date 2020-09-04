@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Quizz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="./index-style.css" rel="stylesheet" media="all" type="text/css">
+    </head>
+    <body>
+        <!-- Le titre du site -->
+			
+	<h1> QUIZZ POUR UN CHAMPION </h1>
+		
+		<!-- La barre du menu -->
+                
+                		<!-- La barre du menu -->	
+			
+	<div class="nav-bar">
+	
+		<!-- icome home  -->
+		<a >  <img  src="images/homeicon.png" alt="home icon"  id="imghome"  /> </a>
+                <br>
+                <p>Anglais <a href="indexEN.jsp"><input type="submit" value="EN" name=""></a>
+                  Espaniol<a href="indexES.jsp"><input type="submit" value="ES" name=""></a></p>
+		<!-- Rubrique Apropos  -->
+		<a > Apropos</a>
+		<!-- Rubrique Contact  -->
+		<a > Contact </a>
+		<!-- Rubrique Termes d'utilisation  -->
+		<a > Termes d'utilisation </a>
+		<!-- Rubrique Categories  -->
+		<select name="Categories"  > Categories
+			<option  >Categories</option>
+			<option  >Programmation</option>
+			<option  >Statistiques</option>
+			<option  >Geographie</option>
+			<option  > Literature</option>
+		</select> 
+		
+		<!-- Rubrique Recherche  -->
+		<input class="champ" type="text" value="Search...)"/>
+		<!-- Rubrique login  -->
+		<input type="text" name="login" value="loggin" >
+		<!-- Rubrique Mot de passe  -->
+		<input type="password" name="mot de passe" value="motdepasse" >
+		<!-- Bouton soumettre  -->
+		<input id="btnsubmit" type="submit" value="Submit">
+		<!-- icone profil -->
+		 <img  src="images/profilicon.jpg" alt="profil icon"  id="imgprofil"  />
+	
+	
+	</div>
+                                
+                <!-- formulaire d'authentification -->
+         <div class="Gestion">       
+        <form method="post" action="AuthentificationServlet">
+            <table border="2">
+                <tr>
+                    <td>
+                         Nom :
+                    </td>
+                     <td>
+                         <input type="text" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        Mot de Pass :
+                     </td>
+                    <td>
+                       <input type="password" name="password"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                <button type="submit" name="submit"> Submit </button>
+                    </td>
+                 </tr>
+            </table>
+        </form>
+         </div>       
+                 <h2> Infos Test</h2>
+                           <p><h3>Compte Admin : mohamed  // mot de passe : 1234</h3></p><br>
+                           <p><h3>Compte Utilisateur : youssef  // mot de passe : 5678</h3></p><br>
+                           <p> <h3>Sinon dans le cas echeant l'authentification conduit vers une page d'erreur</h3></p>
+                                
+                <footer class="footer">
+		  
+		<p> 2020 tous droits reserves </p>
+		  
+		  
+		  <img class="mediassociauxicons" src="images/facebookicon.png">
+		  <img class="mediassociauxicons" src="images/twittericon.jpg">
+		  <img class="mediassociauxicons" src="images/instagramicon.png">
+		  
+		</footer>
+    </body>
+</html>

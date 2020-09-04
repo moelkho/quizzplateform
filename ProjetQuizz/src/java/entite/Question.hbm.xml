@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 14, 2020 12:05:02 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entite.Question" table="QUESTION" schema="BD1EXAMEN12" optimistic-lock="version">
+        <id name="idQuestion" type="long">
+            <column name="ID_QUESTION" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="enonceQuestion" type="string">
+            <column name="ENONCE_QUESTION" length="200" />
+        </property>
+        <set name="reponsePossibles" table="REPONSE_POSSIBLE" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="ID_QUESTION" precision="10" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="entite.ReponsePossible">
+                <column name="ID_REPONSE" precision="10" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="reponsePossibles_1" table="REPONSE_POSSIBLE" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="ID_QUESTION" precision="10" scale="0" />
+            </key>
+            <one-to-many class="entite.ReponsePossible" />
+        </set>
+    </class>
+</hibernate-mapping>
